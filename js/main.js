@@ -59,3 +59,18 @@ $(document).ready(function(){
     navbarFixed();
 
 });
+
+
+// animação do scroll 
+$('nav a').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+        targetoffset = $(id).offset().top - 100;
+
+    
+    $('html, body').animate({
+            scrollTop: targetoffset
+    }, 1000);
+
+    console.log(targetoffset);
+});
